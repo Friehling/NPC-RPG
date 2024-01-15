@@ -14,17 +14,24 @@ public class BattleSystem : MonoBehaviour
     public Transform playerBattleStation;
     public Transform enemyBattleStation;
 
+    Unit playerUnit;
+    Unit enemyUnit;
+
     public BattleState state;
 
     void Start()
     {
-        state = BattleState.START;   
+        state = BattleState.START;
+        SetupBattle();
     }
 
     void SetupBattle()
     {
-        Instantiate(playerPrefab, playerBattleStation);
-        Instantiate(enemyPrefab, enemyBattleStation);
+        GameObject playerGO = Instantiate(playerPrefab, playerBattleStation);
+        playerUnit = playerGO.GetComponent<Unit>();
+
+        GameObject enemyGO = Instantiate(enemyPrefab, enemyBattleStation);
+        enemyUnit = enemyGO.GetComponent<Unit>();
     }
 
 }
