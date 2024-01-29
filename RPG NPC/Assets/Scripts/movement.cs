@@ -24,12 +24,7 @@ public class movement : MonoBehaviour
     
     private void FixedUpdate()
     {
-        
-        
             body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
-            
-        
-        
     }
 
 }
