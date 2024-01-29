@@ -9,7 +9,6 @@ using Random = UnityEngine.Random;
 
 public class Encounter : MonoBehaviour
 {
-    public bool switchScene = false;
     public int index;
     public GameObject player;
     public int randomNumber;
@@ -33,14 +32,23 @@ public class Encounter : MonoBehaviour
     {
         if (collider.gameObject.transform)
         {
-           randomNumber = Random.Range(0, 100);
+            RandNumber();
             if (randomNumber == 9)
             {
-              SceneManager.LoadScene(index);
+              //SceneManager.LoadScene(index);
             }
             Debug.Log("hit");
+            Debug.Log(randomNumber);
             
            
+        }
+    }
+    void RandNumber()
+    {
+        
+        if (Time.time > 1)
+        {
+            randomNumber = Random.Range(0, 200);
         }
     }
 
