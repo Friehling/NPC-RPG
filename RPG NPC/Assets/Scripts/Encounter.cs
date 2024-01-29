@@ -35,7 +35,7 @@ public class Encounter : MonoBehaviour
             RandNumber();
             if (randomNumber == 9)
             {
-              //SceneManager.LoadScene(index);
+              SceneManager.LoadScene(index);
             }
             Debug.Log("hit");
             Debug.Log(randomNumber);
