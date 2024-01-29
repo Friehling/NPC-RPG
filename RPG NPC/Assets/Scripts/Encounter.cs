@@ -12,11 +12,11 @@ public class Encounter : MonoBehaviour
     public int index;
     public GameObject player;
     public int randomNumber;
-   
+    float sidstetid;
     // Start is called before the first frame update
     void Start()
     {
-        
+        float sidstetid = Time.time;
     }
 
     // Update is called once per frame
@@ -30,7 +30,7 @@ public class Encounter : MonoBehaviour
     }
     void OnTriggerStay2D(Collider2D collider)
     {
-        if (collider.gameObject.transform)
+        if (collider.gameObject.transform && Time.time - sidstetid > 0.1)
         {
             RandNumber();
             if (randomNumber == 9)
@@ -39,6 +39,7 @@ public class Encounter : MonoBehaviour
             }
             Debug.Log("hit");
             Debug.Log(randomNumber);
+            sidstetid = Time.time;
             
            
         }

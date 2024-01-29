@@ -8,12 +8,12 @@ public class movement : MonoBehaviour
 
     float horizontal;
     float vertical;
-
     public float runSpeed = 20.0f;
 
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
+        
     }
 
     void Update()
@@ -21,10 +21,15 @@ public class movement : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
     }
-
+    
     private void FixedUpdate()
     {
-        body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
+        
+        
+            body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
+            
+        
+        
     }
 
 }
