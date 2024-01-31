@@ -49,7 +49,7 @@ MonoBehaviour:
   unitLevel: 5
   damage: 10
   maxHP: 30
-  currentHP: 25
+  currentHP: 30
 --- !u!1001 &7845397219037728655
 PrefabInstance:
   m_ObjectHideFlags: 0
