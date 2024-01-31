@@ -707,7 +707,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1933617902160371017, guid: ab91c1ac53aa6494790a605c0fe4aeb1, type: 3}
       propertyPath: rember
-      value: 1
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4250342972901605662, guid: ab91c1ac53aa6494790a605c0fe4aeb1, type: 3}
       propertyPath: m_Name
