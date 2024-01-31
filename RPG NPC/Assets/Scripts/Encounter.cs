@@ -10,7 +10,6 @@ using Random = UnityEngine.Random;
 public class Encounter : MonoBehaviour
 {
     public int index;
-    public GameObject player;
     public int randomNumber;
     float sidstetid;
     // Start is called before the first frame update
@@ -30,7 +29,7 @@ public class Encounter : MonoBehaviour
     }
     void OnTriggerStay2D(Collider2D collider)
     {
-        if (collider.gameObject.transform && Time.time - sidstetid > 0.1)
+        if (collider.gameObject.transform.tag == "Player" && Time.time - sidstetid > 0.1)
         {
             RandNumber();
             if (randomNumber == 9)
