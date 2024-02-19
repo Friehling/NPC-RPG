@@ -18,8 +18,12 @@ public class movement : MonoBehaviour
 
     void Update()
     {
+        if (true)
+        {
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
+        }
+        
     }
     
     private void FixedUpdate()

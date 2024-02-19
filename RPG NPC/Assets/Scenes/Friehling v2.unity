@@ -2780,7 +2780,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 6776490696332088858, guid: 54d796e6cbb7787479e6b91248bd67c1, type: 3}
-  enemyPrefab: {fileID: 4395842928259787644, guid: fabee84150605f645817760227a9bba9, type: 3}
+  enemyPrefab: {fileID: 5189312653020542688, guid: 703ca78420fec6840a1baa5a3d85d9e4, type: 3}
   companionPrefab: {fileID: 5500328010897073606, guid: 780cdb224de52434fa3ccd30d836ccaa, type: 3}
   playerBattleStation: {fileID: 221032657}
   enemyBattleStation: {fileID: 867285858}
