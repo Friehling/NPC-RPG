@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5106323655544263807}
   - component: {fileID: 6896482046466732935}
   - component: {fileID: 9151790044094382909}
-  - component: {fileID: 307361858393664252}
+  - component: {fileID: 6814932930033918013}
   m_Layer: 0
   m_Name: Jelly 8
   m_TagString: Player
@@ -150,8 +150,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runSpeed: 10
---- !u!70 &307361858393664252
-CapsuleCollider2D:
+--- !u!60 &6814932930033918013
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -182,9 +182,26 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.5}
-  m_Size: {x: 1.375, y: 1}
-  m_Direction: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 1.375, y: 1}
+    newSize: {x: 1.375, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.375, y: 1}
+      - {x: -0.625, y: 0.9375}
+      - {x: -0.6875, y: 0.875}
+      - {x: -0.6875, y: 0}
+      - {x: 0.6875, y: 0}
+      - {x: 0.6875, y: 0.875}
+      - {x: 0.4375, y: 1}
+  m_UseDelaunayMesh: 0
 --- !u!1 &8917014337728775088
 GameObject:
   m_ObjectHideFlags: 0
