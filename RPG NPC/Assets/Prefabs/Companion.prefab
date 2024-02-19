@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitName: Companion
-  unitLevel: 100
+  unitLevel: 10
   damage: 0
   maxHP: 0
   currentHP: 0
