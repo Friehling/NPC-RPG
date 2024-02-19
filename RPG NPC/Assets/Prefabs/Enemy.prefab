@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitName: Slimy
-  unitLevel: 2
+  unitLevel: 3
   damage: 5
   maxHP: 30
   currentHP: 30
@@ -111,8 +111,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e59b2b08e19b09458cf18955f59400d, type: 3}
---- !u!4 &7039393716995350855 stripped
-Transform:
+--- !u!224 &7039393716995350855 stripped
+RectTransform:
   m_CorrespondingSourceObject: {fileID: 8506503759659390876, guid: 8e59b2b08e19b09458cf18955f59400d, type: 3}
   m_PrefabInstance: {fileID: 1710768983539070683}
   m_PrefabAsset: {fileID: 0}
