@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 7531339375822937727}
   - component: {fileID: 1305395514353812358}
   - component: {fileID: 1815292509359859412}
+  - component: {fileID: -8761724430918948450}
   m_Layer: 0
   m_Name: Jelly 11
   m_TagString: Player
@@ -233,3 +234,56 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!60 &-8761724430918948450
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4356687856340569331}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 1.5625, y: 1.375}
+    newSize: {x: 1.5625, y: 1.375}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.40625, y: 1.375}
+      - {x: -0.78125, y: 1.25}
+      - {x: -0.78125, y: 0.3125}
+      - {x: -0.53125, y: 0}
+      - {x: 0.71875, y: 0}
+      - {x: 0.78125, y: 0.125}
+      - {x: 0.78125, y: 1.125}
+      - {x: 0.53125, y: 1.375}
+  m_UseDelaunayMesh: 0
