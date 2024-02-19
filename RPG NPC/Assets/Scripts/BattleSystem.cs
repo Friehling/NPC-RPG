@@ -5,19 +5,22 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
+public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST, COMPANIONTURN }
 
 public class BattleSystem : MonoBehaviour
 {
 
     public GameObject playerPrefab;
     public GameObject enemyPrefab;
+    public GameObject companionPrefab;
 
     public Transform playerBattleStation;
     public Transform enemyBattleStation;
+    public Transform companionBattleStation;
 
     Unit playerUnit;
     Unit enemyUnit;
+    Unit companionUnit;
 
     public TMP_Text dialogueText;
 
@@ -39,6 +42,9 @@ public class BattleSystem : MonoBehaviour
 
         GameObject enemyGO = Instantiate(enemyPrefab, enemyBattleStation);
         enemyUnit = enemyGO.GetComponent<Unit>();
+
+        GameObject companionGO = Instantiate(companionPrefab, companionBattleStation);
+        companionUnit = companionGO.GetComponent<Unit>();
 
         dialogueText.text = "A wild " + enemyUnit.unitName + " approaches...";
 
@@ -69,17 +75,13 @@ public class BattleSystem : MonoBehaviour
         }
         else
         {
-            state = BattleState.ENEMYTURN;
-            StartCoroutine(EnemyTurn());
+            state = BattleState.COMPANIONTURN;
+            StartCoroutine(CompanionTurn());
         }
     }
 
     IEnumerator EnemyTurn()
     {
-        
-
-
-
         dialogueText.text = enemyUnit.unitName + "Attacks.";
 
         yield return new WaitForSeconds(1f);
@@ -128,8 +130,26 @@ public class BattleSystem : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
 
+        state = BattleState.COMPANIONTURN;
+        StartCoroutine(CompanionTurn());
+    }
+
+    IEnumerator CompanionTurn()
+    {
+        dialogueText.text = "Your companion is helping you";
+
+        yield return new WaitForSeconds(2f);
+
+        playerUnit.Heal(2);
+
+        playerHUD.SetHP(playerUnit.currentHP);
+        dialogueText.text = "Your companion healed you";
+
+        yield return new WaitForSeconds(2f);
+
         state = BattleState.ENEMYTURN;
         StartCoroutine(EnemyTurn());
+         
     }
 
     public void OnAttackButton()
