@@ -4,6 +4,7 @@ using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST, COMPANIONTURN }
 
@@ -111,10 +112,12 @@ public class BattleSystem : MonoBehaviour
         if(state == BattleState.WON) 
         {
             dialogueText.text = "You won!";
+            SceneManager.LoadScene("MAP");
         }
         else if(state == BattleState.LOST)
         {
             dialogueText.text = "You lost RIP...";
+            SceneManager.LoadScene("Menu");
         }
     }
 
