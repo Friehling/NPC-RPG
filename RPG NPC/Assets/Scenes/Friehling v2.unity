@@ -2779,7 +2779,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23ee2cd84a4951040b250b45660291c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 6776490696332088858, guid: 54d796e6cbb7787479e6b91248bd67c1, type: 3}
+  playerPrefab:
+  - {fileID: 7917829008806097302, guid: 81d75ea743093744f9774c0308c67ae2, type: 3}
+  - {fileID: 7353706106070434163, guid: 059f3b17876fbc947b8f3b3bef5bf898, type: 3}
+  - {fileID: 4778619242715102732, guid: 7865f8fb5ae90494091ae77c4fe08fb8, type: 3}
+  - {fileID: 5453708356357514153, guid: 9b0b7a13dfe8bbe44bdc5a16a84988b2, type: 3}
+  - {fileID: 6757217162631588577, guid: 7012a7139fdfcdb4f8f63fd982d88ac9, type: 3}
+  - {fileID: 5335428945379779889, guid: b2dbff6ffd222464c98f65abfbdfab0d, type: 3}
+  - {fileID: 5398593060717549671, guid: dd3bd4631438d5447825066bb9381ab9, type: 3}
+  - {fileID: 2644147022852564537, guid: ac01bd920a9fd8440a299201ffc7d9fb, type: 3}
+  - {fileID: 7958788782300254542, guid: 0314118442c794343bf1b3c85f908612, type: 3}
+  - {fileID: 2355742122231400733, guid: 2706a6429426b1946b4cbbc4e59aa18e, type: 3}
+  - {fileID: 3300762122287797362, guid: 5fd91c762303b334e8595c409a4c855f, type: 3}
+  - {fileID: 1654074340397504534, guid: fc60f667838bbde46b813e4ef6eeea80, type: 3}
   enemyPrefab: {fileID: 5189312653020542688, guid: 703ca78420fec6840a1baa5a3d85d9e4, type: 3}
   companionPrefab: {fileID: 5500328010897073606, guid: 780cdb224de52434fa3ccd30d836ccaa, type: 3}
   playerBattleStation: {fileID: 221032657}

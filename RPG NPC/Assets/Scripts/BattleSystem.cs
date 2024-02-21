@@ -9,8 +9,9 @@ public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST, COMPANIONTURN
 
 public class BattleSystem : MonoBehaviour
 {
+    control Control;
 
-    public GameObject playerPrefab;
+    public GameObject[] playerPrefab;
     public GameObject enemyPrefab;
     public GameObject companionPrefab;
 
@@ -37,7 +38,8 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator SetupBattle()
     {
-        GameObject playerGO = Instantiate(playerPrefab, playerBattleStation);
+        Control = GameObject.Find("controller").GetComponent<control>();
+        GameObject playerGO = Instantiate(playerPrefab[Control.rember], playerBattleStation);
         playerUnit = playerGO.GetComponent<Unit>();
 
         GameObject enemyGO = Instantiate(enemyPrefab, enemyBattleStation);
