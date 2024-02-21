@@ -2792,8 +2792,8 @@ MonoBehaviour:
   - {fileID: 2355742122231400733, guid: 2706a6429426b1946b4cbbc4e59aa18e, type: 3}
   - {fileID: 3300762122287797362, guid: 5fd91c762303b334e8595c409a4c855f, type: 3}
   - {fileID: 1654074340397504534, guid: fc60f667838bbde46b813e4ef6eeea80, type: 3}
-  enemyPrefab: {fileID: 5189312653020542688, guid: 703ca78420fec6840a1baa5a3d85d9e4, type: 3}
-  companionPrefab: {fileID: 5500328010897073606, guid: 780cdb224de52434fa3ccd30d836ccaa, type: 3}
+  enemyPrefab: {fileID: 7917829008806097302, guid: b59a5061b736e5647bd115a5cb7357a5, type: 3}
+  companionPrefab: {fileID: 1654074340397504534, guid: d9066dea1df4f0b448747963016a28a7, type: 3}
   playerBattleStation: {fileID: 221032657}
   enemyBattleStation: {fileID: 867285858}
   companionBattleStation: {fileID: 1688565020}
