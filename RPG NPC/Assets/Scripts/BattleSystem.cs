@@ -110,7 +110,7 @@ public class BattleSystem : MonoBehaviour
         else if (playerUnit.currentHP >= 15)
         {
             dialogueText.text = enemyUnit.unitName + "Chose attack claw";
-            bool isdead = playerUnit.TakeDamage(enemyUnit.damage + 2);
+            bool isdead = playerUnit.TakeDamage(enemyUnit.damage + 6);
             yield return new WaitForSeconds(1f);
 
             playerHUD.SetHP(playerUnit.currentHP);
@@ -150,7 +150,7 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator PlayerHeal() 
     {
-        playerUnit.Heal(5);
+        playerUnit.Heal(3);
 
         playerHUD.SetHP(playerUnit.currentHP);
         dialogueText.text = "You healed";
@@ -167,7 +167,7 @@ public class BattleSystem : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
 
-        playerUnit.Heal(2);
+        playerUnit.Heal(1);
 
         playerHUD.SetHP(playerUnit.currentHP);
         dialogueText.text = "Your companion healed you";
