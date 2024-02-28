@@ -85,26 +85,48 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator EnemyTurn()
     {
-        dialogueText.text = enemyUnit.unitName + "Attacks.";
+        dialogueText.text = enemyUnit.unitName + "Choose's an attack.";
 
         yield return new WaitForSeconds(1f);
 
-        bool isDead = playerUnit.TakeDamage(enemyUnit.damage);
-
-        playerHUD.SetHP(playerUnit.currentHP);
-
-        yield return new WaitForSeconds(1f);
-
-        if (isDead)
+        if (playerUnit.currentHP <= 15)
         {
-            state = BattleState.LOST;
-            EndBattle();
+            dialogueText.text = enemyUnit.unitName + "Chose attack Bite";
+            bool isdead = playerUnit.TakeDamage(enemyUnit.damage*3);
+            yield return new WaitForSeconds(1f);
+
+            playerHUD.SetHP(playerUnit.currentHP);
+            if (isdead)
+            {
+                state = BattleState.LOST;
+                EndBattle();
+            }
+            else
+            {
+                state = BattleState.PLAYERTURN;
+                PlayerTurn();
+            }
         }
-        else
+        else if (playerUnit.currentHP >= 15)
         {
-            state = BattleState.PLAYERTURN;
-            PlayerTurn();
+            dialogueText.text = enemyUnit.unitName + "Chose attack claw";
+            bool isdead = playerUnit.TakeDamage(enemyUnit.damage + 2);
+            yield return new WaitForSeconds(1f);
+
+            playerHUD.SetHP(playerUnit.currentHP);
+            if (isdead)
+            {
+                state = BattleState.LOST;
+                EndBattle();
+            }
+            else
+            {
+                state = BattleState.PLAYERTURN;
+                PlayerTurn();
+            }
         }
+     
+        
     }
 
     void EndBattle()

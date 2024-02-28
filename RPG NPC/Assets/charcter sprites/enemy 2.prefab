@@ -121,6 +121,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitName: slime
   unitLevel: 2
-  damage: 5
+  damage: 3
   maxHP: 30
   currentHP: 30
