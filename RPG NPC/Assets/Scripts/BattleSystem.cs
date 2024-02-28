@@ -92,7 +92,7 @@ public class BattleSystem : MonoBehaviour
         if (playerUnit.currentHP <= 15)
         {
             dialogueText.text = enemyUnit.unitName + "Chose attack Bite";
-            bool isdead = playerUnit.TakeDamage(enemyUnit.damage*3);
+            bool isdead = playerUnit.TakeDamage(enemyUnit.damage+12);
             yield return new WaitForSeconds(1f);
 
             playerHUD.SetHP(playerUnit.currentHP);
