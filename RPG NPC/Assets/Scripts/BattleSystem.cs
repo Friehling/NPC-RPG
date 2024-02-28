@@ -85,12 +85,42 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator EnemyTurn()
     {
-        dialogueText.text = enemyUnit.unitName + "Choose's an attack.";
+        if (enemyUnit.currentHP <= 10)
+        {
+            dialogueText.text = enemyUnit.unitName + "Choose's an attack.";
 
-        yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(1f);
+
+            dialogueText.text = enemyUnit.unitName + "Chose attack lifedrain";
+
+            bool isdead = playerUnit.TakeDamage(enemyUnit.damage - 2);
+
+            enemyUnit.Heal(10);
+
+            dialogueText.text = enemyUnit.unitName + "Lifedrain healed";
+
+            yield return new WaitForSeconds(1f);
+
+            playerHUD.SetHP(playerUnit.currentHP);
+            enemyHUD.SetHP(enemyUnit.currentHP);
+            if (isdead)
+            {
+                state = BattleState.LOST;
+                EndBattle();
+            }
+            else
+            {
+                state = BattleState.PLAYERTURN;
+                PlayerTurn();
+            }
+        }
 
         if (playerUnit.currentHP <= 15)
         {
+            dialogueText.text = enemyUnit.unitName + "Choose's an attack.";
+
+            yield return new WaitForSeconds(1f);
+
             dialogueText.text = enemyUnit.unitName + "Chose attack Bite";
             bool isdead = playerUnit.TakeDamage(enemyUnit.damage+12);
             yield return new WaitForSeconds(1f);
@@ -107,10 +137,16 @@ public class BattleSystem : MonoBehaviour
                 PlayerTurn();
             }
         }
-        else if (playerUnit.currentHP >= 15)
+        else if (playerUnit.currentHP >= 20)
         {
+            dialogueText.text = enemyUnit.unitName + "Choose's an attack.";
+
+            yield return new WaitForSeconds(1f);
+
             dialogueText.text = enemyUnit.unitName + "Chose attack claw";
+
             bool isdead = playerUnit.TakeDamage(enemyUnit.damage + 6);
+
             yield return new WaitForSeconds(1f);
 
             playerHUD.SetHP(playerUnit.currentHP);
@@ -125,6 +161,7 @@ public class BattleSystem : MonoBehaviour
                 PlayerTurn();
             }
         }
+    
      
         
     }
