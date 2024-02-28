@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitName: y
-  unitLevel: 0
+  unitLevel: 10
   damage: 15
   maxHP: 25
   currentHP: 25

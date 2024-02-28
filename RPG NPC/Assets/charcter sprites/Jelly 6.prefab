@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitName: s
-  unitLevel: 0
-  damage: 0
-  maxHP: 0
-  currentHP: 0
+  unitLevel: 4
+  damage: 10
+  maxHP: 30
+  currentHP: 30
