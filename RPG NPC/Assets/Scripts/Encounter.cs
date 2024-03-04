@@ -12,6 +12,7 @@ public class Encounter : MonoBehaviour
     public int index;
     public int randomNumber;
     float sidstetid;
+    public control Control;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +35,9 @@ public class Encounter : MonoBehaviour
             RandNumber();
             if (randomNumber == 9)
             {
-              SceneManager.LoadScene(index);
+                Control = GameObject.FindObjectOfType<control>();
+                Control.UpdatePlayerPos(collider.transform.position);
+                SceneManager.LoadScene(index);
             }
             Debug.Log("hit");
             Debug.Log(randomNumber);

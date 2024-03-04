@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class control : MonoBehaviour
 {
     public int rember = 0;
-   
+    Vector3 playerPos = new Vector3(-9, 13, 0);
     // Start is called before the first frame update
     void Awake()
     {
@@ -15,11 +15,16 @@ public class control : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public Vector3 GetPlayerPos()
     {
-        
+        return playerPos;
     }
 
+    public void UpdatePlayerPos(Vector3 pos)
+    {
+
+        playerPos = pos;
+    }
     public void Select0()
     {
         rember = 0;
